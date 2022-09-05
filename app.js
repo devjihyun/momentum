@@ -46,6 +46,20 @@ console.log(player.points);
 */
 
 
+//function 계속 반복해서 사용할 수 있는 코드 조각 
+/*
+
+function sayHello(nameOfPerson, age) { //nameOfPerson argument
+    console.log("Hello my name is " + nameOfPerson + " and I'm " + age + ".");
+}
+
+sayHello("Sonia", 34);
+sayHello("Tom", 60);
+
+
+*/
+//argument는 function을 실행하는 동안 어떤 정보를 Function에게 보낼 수 있는 방법
+
 /*
 const calculator = {
     plus: function(a, b) {
