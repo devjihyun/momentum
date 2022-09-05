@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>생산성앱을 만들기 위한 기초 JS 학습</title>
+</head>
+<body>
+    <h1>생산성앱을 만들기 위한 기초 JS 학습</h1>
+    <section>
+        <h2>Array</h2>
+        <pre>
+            1. Array
+            const daysOfWeek = ["mon", "tue", "wed", "thu", "fri", "sat"];
+            
+            2. Get Item from Array
+            console.log(daysOfWeek); //(6) ['mon', 'tue', 'wed', 'thu', 'fri', 'sat']
+            console.log(daysOfWeek[1]); //tue
+            console.log(daysOfWeek[100]); //undefined
+
+            3. Add one more day(item) to the Array
+            daysOfWeek.push("sun");
+            console.log(daysOfWeek); //(7) ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']
+        </pre>
+    </section>
+
+    <section>
+        <h2>Object</h2>
+        <pre>
+            1.Object
+            const player = {
+                name: "sonia", // " name: 'sonia' "는 property
+                points: 10,
+                fat: true,
+            };
+
+            console.log(player); //{name: 'sonia', points: 10, fat: true}
+            console.log(player["name"]); //sonia
+            console.log(player.name); //sonia
+
+            * console is an object and that somewhere has a 'log'
+
+            
+            2. const 안의 프로퍼티는 업데이트 가능
+            player.fat = false;
+            console.log(player.fat); //false
+
+            3.프로퍼티 추가도 가능
+            player.lastName = "Kim";
+            console.log(player); //{name: 'sonia', points: 10, fat: true, lastName: 'Kim'}
+
+            player.points = player.points + 15;
+            console.log(player.points); //25
+        </pre>
+    </section>
+
+    <section>
+        <h2>Function</h2>
+    </section>
+</body>
+</html>
