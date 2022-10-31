@@ -104,7 +104,7 @@
         <pre>
             1. 조건문은 true인지 false인지 알려줌
 
-            2. typeof : 변수(variable)의 타입을 확인하는 방법 
+            2. typeof() : 변수(variable)의 타입을 확인하는 방법 
             console.log(typeof("15")); //string
 
             3. parseInt() : string을 number로 변환
@@ -114,7 +114,59 @@
 
             5. function은 내부에서부터 외부로 실행됨
             const age = parseInt(prompt("How old are you?"));
-            console.log(age);
+            prompt("How old are you?") 실행 후  parseInt() 실행
+
+            6. isNaN() : 인자가 number인지 아닌지 체크, isNaN()은 boolean을 return한다.
+            boolean : true or false
+            
+            7. 조건문 1개 실행
+            if(condition) {
+                //condition === true 
+            } else {
+                //condition == false 
+            }
+
+            const age = parseInt(prompt("How old are you?"));
+            if (isNaN(age)) {
+                console.log("Please write a number");
+            } else {
+                console.log("Thank you for writing your age.");
+            }
+
+            7. 조건문 여러개 실행
+            const age = parseInt(prompt("How old are you?"));
+
+            if (isNaN(age) || age < 0) {
+                console.log("Please write a real positive number.");
+            } else if(age < 18) {
+                console.log("You are too young.");
+            } else if(age >= 18 && age <= 50) {
+                console.log("You can drink.");
+            } else if(age > 50 && age <= 80) {
+                console.log("You should exercise.");
+            } else if(age === 100) {
+                console.log("Wow you are wise!");
+            } else if(age > 80) {
+                console.log("You can do whatever you want.");
+            }
+            
+            8. 연산자
+            OR(||) 연산자 : 하나만 true 여도 true, 모두 false 일 경우에만 false
+            AND(&&) 연산자 : 하나만 false 여도 false, 모두 true 일 경우에만 true
+            
+            true || true === true
+            false || true === true
+            true || false === true
+            false || false === false
+
+            true && true === true
+            false && true === false
+            true && false === false
+            false && false === false
+
+            = : value 할당
+            === : 같은지 확인
+            !== : 같지 않음을 확인
         </pre>
     </section>
 </body>
