@@ -169,5 +169,91 @@
             !== : 같지 않음을 확인
         </pre>
     </section>
+    <section>
+        <h2>JS로 HTML Element 가져오기</h2>
+        <pre>
+            getElementById() : 말 그대로 id, 하나의 값을 반환
+            getElementsByClassName() : 클래스 네임을 가져옴, 많은 element를 가져올때 씀 array를 반환 
+            getElementsByTagName(): name을 할당할 수 있음 array를 반환
+            querySelector() : 선택자와 일치하는 노드의 자손인 첫 번째 요소를 반환, element를 CSS selector방식으로 검색할 수 있음
+            querySelectorAll() : 선택자와 일치하는 노드의 모든 요소를 array형태로 반환
+            
+            > querySelector()를 가장 많이 사용하는 이유
+            css 셀렉터처럼 사용할 수 있어 간편하며 id, class 전부 사용가능하며 하위 태그들도 가져올 수 있음
+            하지만 동일한 클래스가 존재하면 전부다 가져오진 않고 일치하는 첫번째 요소만 반환함
+            동일한 조건에 있는 요소를 모두 불러오고 싶으면 querySelectorAll()를 사용하면 됨
+        </pre>
+    </section>
+
+    <section>
+        <h2>Event</h2>
+        <pre>
+            element의 내부를 보고 싶으면 console.dir() 사용
+            요소 중 앞에 'on'이 붙은 것들은 event
+            event : 어떤 행위를 하는것으로 모든 event는 자바스크립트가 listen할 수 있다.
+            addEventListener() : 자바스크립트가 어떤 event를 listen하고 싶은지 알려줘야함
+
+            function handleTitleClick() {
+                console.log("Title was clicked!");
+            }
+            
+            title.addEventListener("click", handleTitleClick); O 함수가 실행되지 않고 준비만하고 있다가 유저가 클릭을 했을 때 함수를 실행. 
+            title.addEventListener("click", handleTitleClick()); X '()' 사용할 경우 함수를 바로 실행함으로 사용하면 안됨. 
+
+            title.onclick = handleTitleClick; 이렇게도 작성 가능
+        </pre>
+    </section>
+
+    <section>
+        <h2>JS로 CSS 제어하기</h2>
+        <pre>
+            1. className 사용
+            className은 기존 class를 상관하지 않고 모든걸 바꿔버림
+
+            const h1 = document.querySelector(".hello h1");
+
+            function handleTitleClick() {
+                const clickedClass = "clicked";
+
+                if(h1.className === clickedClass) {
+                    h1.className = "";
+                } else {
+                    h1.className = clickedClass;
+                }
+            }
+
+            h1.addEventListener("click", handleTitleClick);
+
+
+            2. classList 사용
+            classList는 class 목록으로 작업할 수 있음
+            contains : 명시한 class가 포함되었는지 확인 가능
+          
+            const h1 = document.querySelector(".hello h1");
+
+            function handleTitleClick() {
+                const clickedClass = "clicked";
+
+                if(h1.classList.contains(clickedClass)) {
+                    h1.classList.remove(clickedClass);
+                } else {
+                    h1.classList.add(clickedClass);
+                }
+            }
+
+            h1.addEventListener("click", handleTitleClick);
+
+            3. toggle 사용
+            toggle : 토큰이 존재하면 토큰제거, 존재하지 않으면 토큰 추가
+
+            const h1 = document.querySelector(".hello h1");
+
+            function handleTitleClick() {    
+                h1.classList.toggle("clicked");
+            }
+
+            h1.addEventListener("click", handleTitleClick);
+        </pre>
+    </section>
 </body>
 </html>
