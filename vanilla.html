@@ -297,6 +297,76 @@
 					ex)link의 기본동작은 클릭 시 다른 사이트로 넘어간다. preventDefault()로 이를 방지
 		        </pre>
 			</section>
+			<section class="note-section">
+				<h2 lass="note-section-title">string과 변수를 합치는 방법</h2>
+				<pre>
+					const loginForm = document.querySelector("#login-form");
+					const loginInput = document.querySelector("#login-form input");
+					const greeting = document.querySelector("#greeting");
+					const HIDDEN_CLASSNAME = "hidden"; // 일반적으로 string만 포함된 변수는 대문자로 표기
+
+					function onLoginSubmit(event) {
+						&nbsp;&nbsp;event.preventDefault();
+						&nbsp;&nbsp;loginForm.classList.add(HIDDEN_CLASSNAME);
+						&nbsp;&nbsp;const username = loginInput.value;
+						&nbsp;&nbsp;greeting.innerText = `Hello ${username}!`;
+						&nbsp;&nbsp;greeting.classList.remove(HIDDEN_CLASSNAME);
+					}
+
+					// old way
+					greeting.innerText = "Hello " + username + "!";
+					// new way
+					greeting.innerText = `Hello ${username}!`; // backtick(``) 사용
+				</pre>
+			</section>
+
+			<section class="note-section">
+				<h2 lass="note-section-title">localStorage</h2>
+				<p class="note-desc">브라우저에 무언가를 저장한 후 나중에 가져 올 수 있음</p>
+				<pre>
+					lcoalStorage.setItem("username", "sonia");
+					lcoalStorage.getItem("username")
+					lcoalStorage.removeItem("username")
+				</pre>
+			</section>
+
+			<section class="note-section">
+				<h2 lass="note-section-title">Timeouts and Dates</h2>
+				<pre>
+					// setInterval() : 반복 실행
+					setInterval(sayHello, 5000); //5초 후 첫시작 후 5초마다 반복
+
+					// setTimeout() : 한번만 실행
+					setTimeout(sayHello, 5000); //5초 후 한번만 실행
+
+					const clock = document.querySelector("#clock");
+
+					function getClock() {
+						&nbsp;&nbsp;const date = new Date();
+						&nbsp;&nbsp;clock.innerText = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+					}
+
+					getClock();
+					setInterval(getClock, 1000);
+				</pre>
+			</section>
+			<section class="note-section">
+				<h2 lass="note-section-title">PadStart(), PadEnd()</h2>
+				<p class="note-desc"></p>
+				<pre>
+					//padStart() 
+					현재 문자열의 시작을 다른 문자열로 좌측부터 채워, 주어진 길이를 만족하는 새로운 문자열을 반환
+
+					const str1 = '5';
+					console.log(str1.padStart(2, '0')); // "05"
+
+					//padEnd() 
+					현재 문자열에 다른 문자열을 우측부터 채워, 주어진 길이를 만족하는 새로운 문자열을 반환
+					
+					const str1 = '5';
+					console.log(str1.padEnd(2, '0')); // "50"
+				</pre>
+			</section>
 		</article>
 	</main>
 </body>
