@@ -1,3 +1,27 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: #fff;
+}
+
 .hidden {
     display: none;
+}
+
+.hidden-text {
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    font-size: 1px;
+    line-height: 1px;
+    clip: rect(1px,1px,1px,1px);
+}
+
+.content {
+    height: 800px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
