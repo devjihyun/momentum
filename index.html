@@ -11,25 +11,37 @@
 </head>
 
 <body>
-	<div id="content" class="content" style="background-image:url('img/01.jpg');">
+	<div id="content" class="content bg" style="background-image:url('img/01.jpg');">
 		<h1 class="hidden-text">Todo List App</h1>
-		<div id="clock" class="clock">00:00:00</div>
-		<div class="login-wrap">
-			<form id="login-form" class="login-form hidden">
-				<input type="text" maxlength="15" placeholder="What is your name?" required />
-				<input type="submit" value="Log In" />
-			</form>
-			<div id="greeting" class="greeting hidden"></div>
-		</div>
-		<div class="todo-wrap">
-			<form id="todo-form">
-				<input type="text" placeholder="Write a To Do and Press Enter" required>
-			</form>
-			<ul id="todo-list"></ul>
+		<div class="center">
+			<div id="clock" class="clock">00:00:00</div>
+			<div class="login-wrap">
+				<form id="login-form" class="login-form hidden">
+					<input type="text" maxlength="15" placeholder="What is your name?" required />
+					<input type="submit" value="Log In" />
+				</form>
+				<div id="greeting" class="greeting hidden"></div>
+			</div>
+			<div class="todo-wrap">
+				<form id="todo-form">
+					<input type="text" placeholder="Write a To Do and Press Enter" required>
+				</form>
+				<ul id="todo-list"></ul>
+			</div>
 		</div>
 		<div id="quote" class="quote-wrap">
 			<span class="quote"></span>
 			<span class="author"></span>
+		</div>
+		<div id="weather" class="weather-wrap">
+			<div class="error"></div>
+			<div class="weather">
+				<div class="weather-ico">
+					<span class="weather-text hidden-text"></span>
+				</div>
+				<span class="temper"></span>
+			</div>
+			<div class="city"></div>
 		</div>
 	</div>
 	<script src="js/greetings.js"></script>
@@ -37,6 +49,7 @@
 	<script src="js/quotes.js"></script>
 	<script src="js/background.js"></script>
 	<script src="js/todo.js"></script>
+	<script src="js/weather.js"></script>
 </body>
 
 </html>
