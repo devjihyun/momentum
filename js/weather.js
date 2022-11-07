@@ -8,7 +8,7 @@ function onGeoOk(position) {
 		.then(response => response.json())
 		.then((data) => {
 			const weatherIcon = document.createElement("img");
-			weatherIcon.src=`http://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+			weatherIcon.src=`https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
 			weatherIcon.alt="";
 			const weatherImg = document.querySelector("#weather .weather-ico");
 			weatherImg.prepend(weatherIcon);

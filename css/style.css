@@ -8,7 +8,7 @@ body {width: 100%;height: 100%;font-family: Arial, Helvetica, sans-serif;font-si
 
 .content{height: 100vh;}
 .bg{background-repeat: no-repeat;background-size: cover;background-position: center;}
-.btn-comm{width:60px;height:35px;border-radius: 3px;border:1px solid #000;font-size:13px;text-align:center;background-color:#000;color:#fff;-webkit-transition: all 0.5s;-o-transition: all 0.5s;transition: all 0.5s;cursor: pointer;}
+.btn-comm{width:60px;height:35px;border-radius: 3px;border:1px solid #000;font-weight:400;font-size:13px;text-align:center;background-color:#000;color:#fff;-webkit-transition: all 0.5s;-o-transition: all 0.5s;transition: all 0.5s;cursor: pointer;box-sizing: content-box;}
 .btn-comm:hover{border-color: #fff;}
 .center{display:-webkit-box;display:-ms-flexbox;display:flex;position: absolute;top: 50%;left: 50%;width:500px;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-transform: translate(-50%,-50%);-ms-transform: translate(-50%,-50%);transform: translate(-50%,-50%);text-align: center;}
 
@@ -24,9 +24,13 @@ body {width: 100%;height: 100%;font-family: Arial, Helvetica, sans-serif;font-si
 .login-wrap .greeting{font-size: 48px;}
 
 .todo-wrap{margin-top:20px;}
+
 .todo-wrap .placeholder{display:block;font-size:34px;}
-.todo-wrap .todo-inp{width:450px;border: 2px solid #fff; border-width: 0 0 2px 0;background-color:transparent;-webkit-transition: 0.3s;-o-transition: 0.3s;transition: 0.3s;font-size: 24px;color: #fff;}
-.todo-wrap .todo-inp:focus{border-color: #F0FF42;caret-color:#F0FF42}
+.todo-wrap .todo-inp{width:450px;border:0 none;background-color:transparent;font-size: 24px;color: #fff;}
+.todo-wrap .todo-inp:focus{caret-color:#F0FF42}
+.todo-wrap .inp-line{position:relative;}
+.todo-wrap .inp-line:after{content:'';position:absolute;left:50%;bottom:0;width:450px;height:2px;margin-left:-225px;background-color: #fff;-webkit-transition: 0.3s;-o-transition: 0.3s;transition: 0.3s;}
+.todo-wrap .todo-inp:focus + .inp-line:after{background-color:#F0FF42;}
 .todo-wrap .todo-list{width:450px;margin:10px auto 0;}
 .todo-wrap .todo-list li{display: -webkit-box;display: -ms-flexbox;display: flex;position:relative;height:45px;line-height:45px;-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between}
 .todo-wrap .todo-list li:before{content:'';position: absolute;top:50%;left:0;width:7px;height:2px;background-color:#fff;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);}
@@ -64,7 +68,8 @@ body {width: 100%;height: 100%;font-family: Arial, Helvetica, sans-serif;font-si
 
     .todo-wrap{margin-top:1.389vw}
     .todo-wrap .placeholder{font-size:2.361vw;}
-    .todo-wrap .todo-inp{width:31.25vw;border:0.139vw solid #fff;border-width: 0 0 0.139vw 0;font-size:1.667vw}
+    .todo-wrap .todo-inp{width:31.25vw;font-size:1.667vw}
+    .todo-wrap .inp-line:after{width:31.25vw;height:0.139vw;margin-left:-15.625vw}
     .todo-wrap .todo-list{width:31.25vw;margin:0.694vw auto 0;}
     .todo-wrap .todo-list li{height: 3.125vw;line-height: 3.125vw}
     .todo-wrap .todo-list li:before{width:0.486vw;height:0.139vw;background-color:#fff}
@@ -96,11 +101,13 @@ body {width: 100%;height: 100%;font-family: Arial, Helvetica, sans-serif;font-si
     .login-wrap .name-inp:-ms-input-placeholder{font-size:3.646vw}
     .login-wrap .name-inp::-ms-input-placeholder{font-size:3.646vw}
     .login-wrap .name-inp::placeholder{font-size:3.646vw}
+    .login-wrap .login-btn{margin-top:2.604vw}
     .login-wrap .greeting{font-size:12.5vw;}
 
     .todo-wrap{margin-top:5.208vw;}
     .todo-wrap .placeholder{font-size:4.688vw}
-    .todo-wrap .todo-inp{width:65.104vw;border:0.521vw solid #fff;border-width:0 0 0.521vw 0;font-size: 6.25vw;}
+    .todo-wrap .todo-inp{width:65.104vw;font-size: 6.25vw;}
+    .todo-wrap .inp-line:after{width:65.104vw;height:0.521vw;margin-left:-32.552vw}
     .todo-wrap .todo-list{width:65.104vw;margin:2.604vw auto 0;}
     .todo-wrap .todo-list li{height:10.417vw;line-height:10.417vw;}
     .todo-wrap .todo-list li:before{width:1.823vw;height:0.521vw}
