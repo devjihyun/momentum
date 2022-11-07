@@ -28,9 +28,9 @@ body {width: 100%;height: 100%;font-family: Arial, Helvetica, sans-serif;font-si
 .todo-wrap .todo-inp{width:450px;border: 2px solid #fff; border-width: 0 0 2px 0;background-color:transparent;-webkit-transition: 0.3s;-o-transition: 0.3s;transition: 0.3s;font-size: 24px;color: #fff;}
 .todo-wrap .todo-inp:focus{border-color: #F0FF42;caret-color:#F0FF42}
 .todo-wrap .todo-list{width:450px;margin:10px auto 0;}
-.todo-wrap .todo-list li{display: -webkit-box;display: -ms-flexbox;display: flex;position:relative;-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between}
+.todo-wrap .todo-list li{display: -webkit-box;display: -ms-flexbox;display: flex;position:relative;height:45px;line-height:45px;-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between}
 .todo-wrap .todo-list li:before{content:'';position: absolute;top:50%;left:0;width:7px;height:2px;background-color:#fff;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);}
-.todo-wrap .todo-list .todo-text{padding-left:15px;font-size:24px;line-height:1.7}
+.todo-wrap .todo-list .todo-text{padding-left:15px;font-size:24px}
 .todo-wrap .delete-btn{position:relative;width:30px;}
 .todo-wrap .delete-btn:after {content: "\00d7"; font-size:30px;}
 .todo-wrap .delete-btn:hover{color: #F0FF42;}
@@ -42,8 +42,81 @@ body {width: 100%;height: 100%;font-family: Arial, Helvetica, sans-serif;font-si
 .weather-wrap {position: absolute;top:20px;left: 20px;}
 .weather-wrap .weather{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;}
 .weather-wrap .weather .weather-ico{width:50px;height:50px;}
+.weather-wrap .weather-ico img{display:inline-block;width: 100%;vertical-align: top;}
 .weather-wrap .weather .temper{font-family:'kanit', sans-serif;font-size: 18px;}
-.weather-wrap .city{font-size: 14px;;text-align: center;}
+.weather-wrap .city{font-size: 14px;text-align: center;}
 .weather-wrap .error{font-size: 14px;}
 
 .logout-btn{position: absolute;top:20px;;right:20px}
+
+@media screen and (min-width:768px) and (max-width:1440px) {
+    .btn-comm{width:4.167vw;height:2.431vw;border-radius:0.208vw;font-size:0.903vw}
+    .center{width: 34.722vw;}
+    .clock{font-size:8.333vw}
+
+    .login-wrap .name-inp{width:17.361vw;height:2.431vw;padding:0 0.694vw;border-radius:0.208vw;border:0.139vw solid #fff}
+    .login-wrap .name-inp::-webkit-input-placeholder{font-size:0.972vw}
+    .login-wrap .name-inp::-moz-placeholder{font-size:0.972vw}
+    .login-wrap .name-inp:-ms-input-placeholder{font-size:0.972vw}
+    .login-wrap .name-inp::-ms-input-placeholder{font-size:0.972vw}
+    .login-wrap .name-inp::placeholder{font-size:0.972vw}
+    .login-wrap .greeting{font-size:3.333vw}
+
+    .todo-wrap{margin-top:1.389vw}
+    .todo-wrap .placeholder{font-size:2.361vw;}
+    .todo-wrap .todo-inp{width:31.25vw;border:0.139vw solid #fff;border-width: 0 0 0.139vw 0;font-size:1.667vw}
+    .todo-wrap .todo-list{width:31.25vw;margin:0.694vw auto 0;}
+    .todo-wrap .todo-list li{height: 3.125vw;line-height: 3.125vw}
+    .todo-wrap .todo-list li:before{width:0.486vw;height:0.139vw;background-color:#fff}
+    .todo-wrap .todo-list .todo-text{padding-left:1.042vw;font-size:1.667vw;}
+    .todo-wrap .delete-btn{width:2.083vw;}
+    .todo-wrap .delete-btn:after {font-size:2.083vw;}
+
+    .quote-wrap{bottom:2.083vw;padding:0 1.389vw}
+    .quote-wrap .quote{font-size:1.111vw;}
+    .quote-wrap .author{margin-top:0.347vw;font-size:0.833vw;}
+
+    .weather-wrap {top:1.389vw;left:1.389vw;}
+    .weather-wrap .weather .weather-ico{width:3.472vw;height:3.472vw;}
+    .weather-wrap .weather .temper{font-size:1.25vw;}
+    .weather-wrap .city{font-size: 0.972vw;}
+    .weather-wrap .error{font-size: 0.972vw;}
+
+    .logout-btn{top:1.389vw;;right:1.389vw}
+}
+
+@media screen and (max-width:767px) {
+    .btn-comm{width:15.625vw;height:9.115vw;border-radius:0.781vw;font-size:3.385vw}
+    .center{width: 69.444vw;}
+    .clock{font-size:18.229vw}
+
+    .login-wrap .name-inp{width: 65.104vw;height: 9.115vw;padding:0 2.604vw;border-radius:0.781vw;border:0.521vw solid #fff}
+    .login-wrap .name-inp::-webkit-input-placeholder{font-size:3.646vw}
+    .login-wrap .name-inp::-moz-placeholder{font-size:3.646vw}
+    .login-wrap .name-inp:-ms-input-placeholder{font-size:3.646vw}
+    .login-wrap .name-inp::-ms-input-placeholder{font-size:3.646vw}
+    .login-wrap .name-inp::placeholder{font-size:3.646vw}
+    .login-wrap .greeting{font-size:12.5vw;}
+
+    .todo-wrap{margin-top:5.208vw;}
+    .todo-wrap .placeholder{font-size:4.688vw}
+    .todo-wrap .todo-inp{width:65.104vw;border:0.521vw solid #fff;border-width:0 0 0.521vw 0;font-size: 6.25vw;}
+    .todo-wrap .todo-list{width:65.104vw;margin:2.604vw auto 0;}
+    .todo-wrap .todo-list li{height:10.417vw;line-height:10.417vw;}
+    .todo-wrap .todo-list li:before{width:1.823vw;height:0.521vw}
+    .todo-wrap .todo-list .todo-text{padding-left:3.906vw;font-size:4.688vw}
+    .todo-wrap .delete-btn{width:7.813vw}
+    .todo-wrap .delete-btn:after {font-size:7.813vw}
+
+    .quote-wrap{bottom:7.813vw;padding:0 5.208vw}
+    .quote-wrap .quote{font-size:4.167vw}
+    .quote-wrap .author{margin-top:1.302vw;font-size:3.125vw}
+
+    .weather-wrap {top:5.208vw;left:5.208vw;}
+    .weather-wrap .weather .weather-ico{width:13.021vw;height:13.021vw;}
+    .weather-wrap .weather .temper{font-size:4.688vw}
+    .weather-wrap .city{font-size: 3.646vw}
+    .weather-wrap .error{font-size: 3.646vw;}
+
+    .logout-btn{top:5.208vw;;right:5.208vw}
+}

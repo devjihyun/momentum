@@ -8,13 +8,9 @@ https://devjihyun.github.io/momentum.github.io/vanilla.html
 
 기능
  랜덤 배경 이미지
+ 랜덤 명언
  시계
- 로컬 스토리지를 사용한 Log-in
- 로컬 스토리지를 사용한 To do list
+ 로그인, 로그아웃(리셋)
+ To do list
  날씨와 위치(Geolocation)
-
-
- Todo
- 스타일
- 로그아웃 버튼
  반응형
