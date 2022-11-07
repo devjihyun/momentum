@@ -1,21 +1,49 @@
-body {width: 100%;height: 100%;font-family: Arial, Helvetica, sans-serif;font-size: 30px;color: #fff;}
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap');
+
+body {width: 100%;height: 100%;font-family: Arial, Helvetica, sans-serif;font-size: 30px;line-height:1.5;color: #fff;text-shadow:1px 1px 3px rgb(0 0 0 / 72%);}
 
 .hidden{display:none}
 .hidden-text{display: block;overflow: hidden;position: absolute;width: 1px;height: 1px;font-size: 1px;line-height: 1px;clip: rect(1px,1px,1px,1px);}
 
 .content{height: 100vh;}
 .bg{background-repeat: no-repeat;background-size: cover;background-position: center;}
+.btn-comm{width:60px;height:35px;border-radius: 3px;border:1px solid #000;font-size:13px;text-align:center;background-color:#000;color:#fff;-webkit-transition: all 0.5s;-o-transition: all 0.5s;transition: all 0.5s;cursor: pointer;}
+.btn-comm:hover{border-color: #fff;}
+.center{display:-webkit-box;display:-ms-flexbox;display:flex;position: absolute;top: 50%;left: 50%;width:500px;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-transform: translate(-50%,-50%);-ms-transform: translate(-50%,-50%);transform: translate(-50%,-50%);text-align: center;}
 
-.center{display:flex;position: absolute;top: 50%;left: 50%;flex-direction:column;transform: translate(-50%,-50%)}
-.clock{font-size:36px;text-align: center;}
-.quote-wrap{position: absolute;right:0;bottom: 30px;left: 0;padding:0 20px;text-align: center;}
-.quote-wrap .quote{font-size:18px;}
-.quote-wrap .author{display: block;margin-top:10px;font-size: 14px;}
-.weather-wrap {position: absolute;top:20px;right: 20px;}
-.weather-wrap .weather{display:flex;align-items:center;justify-content:center;}
+.clock{font-size:120px;text-align: center;font-family:'kanit', sans-serif;letter-spacing: 0.05em;}
+
+.login-wrap .name-inp{width: 250px;height: 35px;padding:0 10px;border-radius: 3px;border:2px solid #fff;background-color: transparent;-webkit-transition: 0.3s;-o-transition: 0.3s;transition: 0.3s;-webkit-box-sizing: border-box;box-sizing: border-box;color:#fff}
+.login-wrap .name-inp:focus{border-color:#000}
+.login-wrap .name-inp::-webkit-input-placeholder{font-size:14px;color:#fff}
+.login-wrap .name-inp::-moz-placeholder{font-size:14px;color:#fff}
+.login-wrap .name-inp:-ms-input-placeholder{font-size:14px;color:#fff}
+.login-wrap .name-inp::-ms-input-placeholder{font-size:14px;color:#fff}
+.login-wrap .name-inp::placeholder{font-size:14px;color:#fff}
+.login-wrap .greeting{font-size: 48px;}
+
+.todo-wrap{margin-top:20px;}
+.todo-wrap .placeholder{display:block;font-size:34px;}
+.todo-wrap .todo-inp{width:450px;border: 2px solid #fff; border-width: 0 0 2px 0;background-color:transparent;-webkit-transition: 0.3s;-o-transition: 0.3s;transition: 0.3s;font-size: 24px;color: #fff;}
+.todo-wrap .todo-inp:focus{border-color: #F0FF42;caret-color:#F0FF42}
+.todo-wrap .todo-list{width:450px;margin:10px auto 0;}
+.todo-wrap .todo-list li{display: -webkit-box;display: -ms-flexbox;display: flex;position:relative;-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between}
+.todo-wrap .todo-list li:before{content:'';position: absolute;top:50%;left:0;width:7px;height:2px;background-color:#fff;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);}
+.todo-wrap .todo-list .todo-text{padding-left:15px;font-size:24px;line-height:1.7}
+.todo-wrap .delete-btn{position:relative;width:30px;}
+.todo-wrap .delete-btn:after {content: "\00d7"; font-size:30px;}
+.todo-wrap .delete-btn:hover{color: #F0FF42;}
+
+.quote-wrap{position: absolute;right:0;bottom: 30px;left: 0;padding:0 20px;text-align: center;font-family: 'Noto Serif KR', serif;}
+.quote-wrap .quote{font-size:16px;}
+.quote-wrap .author{display: block;margin-top:5px;font-size: 12px;}
+
+.weather-wrap {position: absolute;top:20px;left: 20px;}
+.weather-wrap .weather{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;}
 .weather-wrap .weather .weather-ico{width:50px;height:50px;}
-.weather-wrap .weather .temper{font-size: 18px;}
+.weather-wrap .weather .temper{font-family:'kanit', sans-serif;font-size: 18px;}
 .weather-wrap .city{font-size: 14px;;text-align: center;}
 .weather-wrap .error{font-size: 14px;}
 
-.logout{position: absolute;top:20px;;left:20px;font-size: 14px}
+.logout-btn{position: absolute;top:20px;;right:20px}

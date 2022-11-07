@@ -17,16 +17,17 @@
 			<div id="clock" class="clock">00:00:00</div>
 			<div class="login-wrap">
 				<form id="login-form" class="login-form hidden">
-					<input type="text" maxlength="15" placeholder="What is your name?" required />
-					<input type="submit" value="Log In" />
+					<input type="text" class="name-inp" placeholder="Please enter your name" maxlength="15" required />
+					<input type="submit" class="btn-comm login-btn" value="Log In" />
 				</form>
 				<div id="greeting" class="greeting hidden"></div>
 			</div>
-			<div class="todo-wrap">
+			<div class="todo-wrap hidden">
 				<form id="todo-form">
-					<input type="text" placeholder="Write a To Do and Press Enter" required>
+					<span class="placeholder">Write a To-do and press enter.</span>
+					<input type="text" class="todo-inp" required>
 				</form>
-				<ul id="todo-list"></ul>
+				<ul id="todo-list" class="todo-list"></ul>
 			</div>
 		</div>
 		<div id="quote" class="quote-wrap">
@@ -43,7 +44,7 @@
 			</div>
 			<div class="city"></div>
 		</div>
-		<div id="logout" class="logout">logout</div>
+		<button id="logout" class="btn-comm logout-btn hidden">Logout</button>
 	</div>
 	<script src="js/login.js"></script>
 	<script src="js/clock.js"></script>
@@ -51,7 +52,6 @@
 	<script src="js/background.js"></script>
 	<script src="js/todo.js"></script>
 	<script src="js/weather.js"></script>
-	<script src="js/logout.js"></script>
 </body>
 
 </html>

@@ -2,6 +2,16 @@ const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
 const greeting = document.querySelector("#greeting");
 
+const logOutBtn = document.querySelector("#logout");
+logOutBtn.addEventListener("click", resetUserInfo);
+
+function resetUserInfo() {
+	localStorage.clear();
+	location.reload();
+};
+
+const toDoWrap = document.querySelector(".todo-wrap");
+
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY="username";
 
@@ -11,6 +21,8 @@ function onLoginSubmit(event) {
 	const username = loginInput.value;
 	localStorage.setItem(USERNAME_KEY, username);
 	paintGreetings(username);
+	logOutBtn.classList.remove(HIDDEN_CLASSNAME);
+	toDoWrap.classList.remove(HIDDEN_CLASSNAME);
 }
 
 function paintGreetings(username) {
@@ -25,6 +37,8 @@ if(savedUsername === null) {
 	loginForm.classList.remove(HIDDEN_CLASSNAME);
 	loginForm.addEventListener("submit", onLoginSubmit);
 } else {
-	// show the greetings
+	// show the greetings, logout btn, todo forms
 	paintGreetings(savedUsername);
+	logOutBtn.classList.remove(HIDDEN_CLASSNAME);
+	toDoWrap.classList.remove(HIDDEN_CLASSNAME);
 }

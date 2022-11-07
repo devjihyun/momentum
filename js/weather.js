@@ -16,7 +16,7 @@ function onGeoOk(position) {
 			const temper = document.querySelector("#weather .temper");
 			const city = document.querySelector("#weather .city");
 			weatherText.innerText = `${data.weather[0].main}`;
-			temper.innerText = `${data.main.temp}°C`;
+			temper.innerText = `${parseInt(data.main.temp)}°C`;
 			city.innerText = data.name;
 	});
 }
