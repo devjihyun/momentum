@@ -402,8 +402,27 @@
 
 			<section class="note-section">
 				<h2 lass="note-section-title">JSON.stringify()</h2>
-				<p class="note-desc">JS 객체를 문자열로 변환</p>
+				<p class="note-desc">JavaScript 값이나 객체를 JSON 문자열로 변환</p>
+			</section>
+
+			<section class="note-section">
+				<h2 lass="note-section-title">Geolocation</h2>
+				<p class="note-desc">Geolocation API는 사용자가 원할 경우 웹 애플리케이션에 위치 정보를 제공할 수 있는 API</p>
 				<pre>
+					// 사용자 위치 알아내기
+					navigator.geolocation.getCurrentPositon();
+
+					// 위치정보 받아오기 성공했을 때 실행
+					function onGeoOk(position) {
+						&nbsp;&nbsp;const lat = position.coords.latitude;
+						&nbsp;&nbsp;const lng = position.coords.longitude;
+						&nbsp;&nbsp;console.log("You live in", lat, lng);
+					}
+
+					// 위치정보 받아오기 실패했을 때 실행
+					function onGeoError(position) {
+						&nbsp;&nbsp;console.log("Can't find you. No weather for you.")
+					}
 				</pre>
 			</section>
 		</article>
