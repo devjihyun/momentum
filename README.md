@@ -13,4 +13,4 @@
  반응형
 
 [Demo Page](https://devjihyun.github.io/momentum "Go Demo Page")   
-[Studt Note](https://devjihyun.github.io/momentum.github.io/vanilla.html "Go Study Note")
+[Studt Note](https://devjihyun.github.io/momentum/vanilla.html "Go Study Note")
