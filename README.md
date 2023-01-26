@@ -1,12 +1,9 @@
 # momentum
 
-화면
-https://devjihyun.github.io/momentum.github.io
+바닐라 JS로 생산성앱 만들기
 
-study note
-https://devjihyun.github.io/momentum.github.io/vanilla.html
-
-기능
+구현 기능 :
+   
  랜덤 배경 이미지
  랜덤 명언
  시계
@@ -14,3 +11,6 @@ https://devjihyun.github.io/momentum.github.io/vanilla.html
  To do list
  날씨와 위치(Geolocation)
  반응형
+
+[Demo Page](https://devjihyun.github.io/momentum "Go Demo Page")   
+[Studt Note](https://devjihyun.github.io/momentum.github.io/vanilla.html "Go Study Note")
